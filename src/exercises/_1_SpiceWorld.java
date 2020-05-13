@@ -6,18 +6,12 @@ public class _1_SpiceWorld {
 	 */
 
 	public static void main(String[] args) {
-		SpiceGirl sporty = new SpiceGirl() {
-			
-			@Override
-			public void perform() {
-				System.out.println("Do backflips.");
-				
-			}
-		};
+		SpiceGirl sporty = () -> System.out.println("Do backflips.");
 		sporty.perform();
 	}
 }
 
+@FunctionalInterface
 interface SpiceGirl {
 	void perform();
 }
